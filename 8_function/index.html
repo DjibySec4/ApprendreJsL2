@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1">Paragraphe 1</p>
+    <p id="p2">Paragraphe 2</p>
+    <span id="span"></span>
+    
+    <script>
+        // Créer une fonction ananyme qui calcul le carré d'un nombre passé en param
+        // Méthode 1 : Exécuté la fonction ananyme via une variable
+        // var x = function (y)
+        // {
+        //     return y * y;
+        // }
+        // alert(x(4));
+
+        // Méthode 2 : Auto-invoqué la fonction
+        // (function ()
+        // {
+        //     var x = prompt("Entrez la valeur de x");
+
+        //     alert(`Le carré de ${x} est ${x * x} `);
+        // })();
+
+        // Méthode 3 : D'utiliser un evenement
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var span = document.getElementById("span");
+
+        p1.addEventListener('mouseenter', () => {
+            p1.style.color = 'red';
+            p1.style.fontWeight = 'bold';
+            p1.style.fontSize = '20px';
+
+            span.innerHTML =  "<b>Vous avez poser le curser sur le paraagraphe 1</b>";
+            span.style.backgroundColor = "#1ce";
+            
+        });
+        p2.addEventListener('mouseenter', function(){
+            p2.style.fontWeight = 'bold';
+            p2.style.color = 'yellow';
+            p2.style.fontSize = '20px';
+
+            span.innerHTML =  "<b>Vous avez poser le curser sur le paraagraphe 2</b>";
+            span.style.backgroundColor = "orange";
+        });
+
+
+        p1.addEventListener('mouseleave', function(){
+            p1.style.color = '';
+            p1.style.fontWeight = '';
+            p1.style.fontSize = '';
+
+            span.innerHTML =  "<b>Les stylisations sur p1 ont été retiré avec succès</b>";
+            span.style.backgroundColor = "#1ce";
+            
+        });
+        
+        p2.addEventListener('mouseleave', function(){
+            p2.style.fontWeight = '';
+            p2.style.color = '';
+            p2.style.fontSize = '';
+            
+            span.innerHTML =  "<b>Les stylisations sur p2 ont été retiré avec succès</b>";
+            span.style.backgroundColor = "orange";
+        });
+
+
+
+        // Les parametres de repos
+        function somme(...args) {
+            let sum = 0;
+            for (let arg of args) 
+            {
+                sum += arg;
+            }
+            return sum;
+        }
+        alert(somme(2, 3, 4));
+    </script>
+</body>
+</html>

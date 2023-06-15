@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+
+    <script>
+        // 🌴🌴🌴🌴🌴🌴🌴🌴 La boucle for 🌴🌴🌴🌴🌴🌴🌴🌴
+
+        // Exemple 1 : Boucler avec les 3 expressions
+        // const voitures = ["Toyota", "Peugeo", "Hyundai"];
+        // text = "";
+        // for (let i = 0; i < voitures.length; i++) {
+        //     text += voitures[i] + '</br>';
+        // }
+        // document.getElementById("p1").innerHTML = text;
+
+        // Exemple 2 : Boucler sans l'expression 1
+        // const voitures = ["Toyota", "Peugeo", "Hyundai", "Mercedes"];
+        // text = "";
+        // let i = 0, taille = voitures.length;
+        // for (; i < taille; i++) {
+        //     text += voitures[i] + '</br>';
+        // }
+        // document.getElementById("p1").innerHTML = text;
+
+         // Exemple 3 : Boucler sans l'expression 2
+         
+        //  voitures = ["Toyota", "Peugeo", "Hyundai", "Mercedes"];
+        //  text = "";
+        //  let i = 0;
+        //  function test()
+        //  {
+        //     for (; ;) {
+        //         if(i < voitures.length)
+        //         {
+        //             text += voitures[i] + '</br>';
+        //             i++;
+        //         }
+        //         else
+        //         {
+        //             return;
+        //         }
+        //         document.getElementById("p1").innerHTML = text;
+        //     }
+        // }
+        // test();
+
+
+        //🌴🌴🌴🌴🌴🌴🌴🌴 La boucle for in 🌴🌴🌴🌴🌴🌴🌴🌴
+        // text = "";
+        // const objetPersonne = {
+        //     nom : "Sarr",
+        //     prenom : "Modou",
+        //     dateNaissance : `${new Date().getDate()} / 0${new Date().getMonth() + 1} / ${new Date().getFullYear()} `,
+        //     age : 12,
+        // };
+
+        // for (const key in objetPersonne) {
+        //     text += objetPersonne[key] + "</br>";
+        // }   
+        // document.getElementById("p1").innerHTML = text;
+
+
+         //🌴🌴🌴🌴🌴🌴🌴🌴 La boucle forEach🌴🌴🌴🌴🌴🌴🌴🌴
+         //Exemple 1
+         text = "";
+         const tab = [3, 2, 'Issa pouye', 8, 9];
+         
+        //  //On boucle le tableau
+         tab.forEach(maFonction);
+         
+        function maFonction(value, index, tabOriginal)
+        {
+             text += "Position " + index + " - valeur => " + value + "</br>";
+             //  alert(tabOriginal.length);
+        }
+        document.getElementById("p1").innerHTML = text;
+            
+        //Exemple 2
+        //   text = "";
+        //  const tab = [3, 2, 'Issa pouye', 8, 9];
+         
+        //  //On boucle le tableau
+        //  tab.forEach( function(value, index) {
+        //      text += "Position " + index + " - valeur => " + value + "</br>";
+        // });
+        // document.getElementById("p1").innerHTML = text;
+
+        // tab.forEach( (value, index) => {
+        //      text += "Position " + index + " - valeur => " + value + "</br>";
+        // });
+        // document.getElementById("p1").innerHTML = text;
+        
+            
+
+    </script>
+</body>
+</html>

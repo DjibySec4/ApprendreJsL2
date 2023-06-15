@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--  Liste des noms -->
+    <h2>Liste des nnoms</h2>
+    <p id="listeNoms"></p>
+    
+    <h2>Liste des prenoms</h2>
+    <!--  Liste des prénoms -->
+    <p id="listePrenoms"></p>
+    
+    <h2>Liste des adresses</h2>
+    <!--  Liste des adresses -->
+    <p id="listeAdresses"></p>
+
+    <script>
+
+        tabPersonne = [
+            {nom : "Sarr", prenom : "Modou", adresse : "Pikine rue 10"},
+            {nom : "Diouf", prenom : "Daouda", adresse : "Guediaway"},
+            {nom : "Diallo", prenom : "Babacar", adresse : "Dieupeul"},
+        ];
+
+        listeNoms = ""; 
+        listePrenoms = ""; 
+        listeAdresses = ""; 
+
+
+        tabPersonne.forEach( (element, index, tabOriginal) => {
+            listeNoms += element.nom + ', '; 
+            listePrenoms += element.prenom + ', '; 
+            listeAdresses += element.adresse + ', '; 
+        });
+
+
+
+        document.getElementById("listeNoms").innerHTML = listeNoms;
+        document.getElementById("listePrenoms").innerHTML = listePrenoms;
+        document.getElementById("listeAdresses").innerHTML = listeAdresses;
+    </script>
+</body>
+</html>

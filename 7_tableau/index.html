@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const tab = tabSauvegarde = ["Lundi", "Mardi", 12, 18, false];
+        alert(typeof tab)
+        var a = b = 3;
+        b  = 4
+        a  = b;
+        alert(a);
+        alert(b);
+
+        console.log("Anciennes Valeurs");
+        console.log(tab);
+        console.log(tabSauvegarde);
+        
+        // Ajouter Mercredi à la fin du tableau tableau tab
+        tab.push("Mercredi"); 
+        
+        console.log("Nouvelles Valeurs");
+        console.log(tab);
+        console.log(tabSauvegarde);
+
+        const tab2 = new Array(2, 34, "ffhf");
+
+        var info2 = tab[1]; // alert(infos2) affiche Mardi
+
+        // for (let i = 0; i < tab.length; i++) {
+        //     alert(tab[i]);
+        // }
+
+        tab.forEach((value, index) => {
+            console.log(`Index : ${index}, valeur : ${value}`);
+        });
+
+        // Similaire à forEach
+        tab.map((value, index) => {
+            console.log(`Index : ${index}, valeur : ${value}`);
+        });
+
+    </script>
+</body>
+</html>

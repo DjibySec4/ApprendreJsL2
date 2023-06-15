@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <button  onclick="myFunction()">Changer le contenu du paragraphe</button>
+    <p id="p2">Veuillez visiter Microsoft et micRosofT!</p>
+
+
+    <script>
+        let text = "Bonjour tout le monde";
+        // Methode slice
+        // let part = text.slice(-12);
+
+        // Methhode substring
+        // let part = text.substring(-2, 5);
+
+        // Methhode substr
+        // let part = text.substr(4, 3);
+
+        // Methode replace 
+    
+        function myFunction() {
+            let contenuP2 = document.getElementById("p2");
+            // contenuP2.innerHTML = contenuP2.innerHTML.replace("Microsoft","Daaray Technologie");
+            // contenuP2.innerHTML = contenuP2.innerHTML.replaceAll(/Microsoft/ig,"Daaray Technologie");
+            contenuP2.innerHTML = contenuP2.innerHTML.replace(/Microsoft/ig,"Daaray Technologie").toLowerCase().toUpperCase();
+            alert("Modou".concat(" va à l'ecole", ".").toUpperCase());
+        }
+
+
+        // Methode trim(), trimeStat() et trimEnd()
+        let prenom = "                         Issa                            ";
+        console.log(prenom.trim()); 
+
+
+        // Methode padStart() et padEnd()
+        montant = "100";
+        // alert(age.length);
+        alert(montant.padEnd(6, '.00'))
+
+        maVar = "texte";
+        maVar[3] = "dkdfkfkfkf";
+        alert(maVar[3]);
+        // console.log(prenom.trimStart()); 
+        // console.log(prenom.trimEnd()); 
+
+        // document.getElementById("p2").innerHTML = part;
+    </script>
+</body>
+</html>

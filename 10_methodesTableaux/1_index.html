@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button 
+        {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h3>Mon tableau</h3>
+    <p id="demo"></p> <!-- Banane,Orange,Apple,Mango -->
+
+    <button onclick="deleteLastItem()">Supprimer le dernier element pop()</button>
+    <button onclick="deleteFirstItem()">Supprimer le premier element shift()</button>
+    <button onclick="addLastItem()">Ajouter Madd à la fin du tableau push()</button>
+    <button onclick="addFirstItem()">Ajouter Toll en debut de tab unshift()</button>
+    <script>
+        const tabFruits = ["Banane", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = tabFruits.join(" - ");
+        
+        // Methode Join
+        // document.getElementById("demo").innerHTML = tabFruits.join(" ✅ ");
+
+         // Methode pop
+         function deleteLastItem()
+         {
+            itemDeleted = tabFruits.pop();
+            document.getElementById("demo").innerHTML = tabFruits.join(" - ");
+        }
+
+         // Methode shift
+         function deleteFirstItem()
+         {
+            itemDeleted = tabFruits.shift();
+            document.getElementById("demo").innerHTML = tabFruits.join(" - ");
+        }
+
+        // push
+        function addLastItem()
+         {
+            if (!tabFruits.toString().includes("Madd")) {       
+                newTaille = tabFruits.push("Madd");
+                document.getElementById("demo").innerHTML = tabFruits.join(" - ");
+            }
+            else 
+            {
+                alert("Madd est déjà dans le tableau");
+            }
+        }
+
+        // unshift
+        function addFirstItem()
+         {
+            if (!tabFruits.toString().includes("Toll")) {       
+                newTaille = tabFruits.unshift("Toll");
+                document.getElementById("demo").innerHTML = tabFruits.join(" - ");
+            }
+            else 
+            {
+                alert("Toll est déjà dans le tableau");
+            }
+        }
+</script>
+</body>
+</html>
